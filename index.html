@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - Academia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        h2 { text-align: center; color: #333; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        button { width: 100%; background: #28a745; color: white; border: none; padding: 10px; margin-top: 15px; cursor: pointer; border-radius: 4px; font-size: 16px; }
+        button:hover { background: #218838; }
+        #resultado { margin-top: 20px; background: #e9ecef; padding: 10px; border-radius: 4px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Calculadora de IMC</h2>
+        
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" placeholder="Ex: 70">
+
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01">
+
+        <button id="calcular">Calcular</button>
+
+        <div id="resultado">
+            <p><strong>Valor do IMC:</strong> <span id="resultado_valor_imc">-</span></p>
+            <p><strong>Status do IMC:</strong> <span id="resultado_status_imc">-</span></p>
+        </div>
+    </div>
+
+    <!-- Importa o ficheiro JavaScript com a lógica do DOM -->
+    <script src="script.js"></script>
+</body>
+</html>
